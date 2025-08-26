@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "adv.html#learning-goals",
+    "href": "adv.html#learning-goals",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Learning goals",
+    "text": "Learning goals\n\nBroaden view on accessibility\nLearn tools for accessible data science\nMake research outreach more accessible"
+  },
+  {
+    "objectID": "adv.html#prologue",
+    "href": "adv.html#prologue",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Prologue",
+    "text": "Prologue\nWhile presenting my poster at Jyväskylä Summer School…"
+  },
+  {
+    "objectID": "adv.html#accessibility",
+    "href": "adv.html#accessibility",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Accessibility",
+    "text": "Accessibility\nOver a billion people (more than 15% of the global population) have at least one disability (WHO 2022).\nThe 2019 European Accessibility Act (EEA) just came into effect in June 2025 and requires EU products to be accessible.\nThe Web Content Accessibility Guidelines (WCAG) published by the World Wide Web Consortium (3WC) promote content to be:\n\nperceivable to multiple senses (e.g., alt text)\noperable in multiple modes (e.g., keyboard navigation)\nunderstandable through a simple and intuitive interface\nrobust with current and future tech (e.g, reading machine)"
+  },
+  {
+    "objectID": "adv.html#multi-sensory-visualisation",
+    "href": "adv.html#multi-sensory-visualisation",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Multi-sensory visualisation",
+    "text": "Multi-sensory visualisation\nFor more accessible data visualisation, we can leverage multiple sensory modalities.\n\n“Data visualisation implies vision, but vision is not always available, or complexity might be visually overwhelming.”\n— Markku Häkkinen\n\n\n“We shouldn’t abbreviate the truth but rather get a new method of presentation.”\n― Edward Tufte\n\nLearn how to land a plane, then check out theme_tufte()."
+  },
+  {
+    "objectID": "adv.html#beyond-just-plots",
+    "href": "adv.html#beyond-just-plots",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Beyond just plots",
+    "text": "Beyond just plots\nAccessibility from enthusiast to devoted:\n\nAlternative text\nPlots to sounds (sonification)\n3D-printed models\nEmbossed paper\nLithophanes\nHaptics"
+  },
+  {
+    "objectID": "adv.html#alt-text",
+    "href": "adv.html#alt-text",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Alt text",
+    "text": "Alt text\nAlt text should not be a copy of the figure caption, as it serves a different purpose (accessibility vs context/emphasis).\nAlt text should be a clear and complete description of visual content (e.g, a figure), going from general to narrow focus, from major to minor aspects.\n\nExample of alt text from my master thesis"
+  },
+  {
+    "objectID": "adv.html#sonify-the-microbiome",
+    "href": "adv.html#sonify-the-microbiome",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Sonify the microbiome",
+    "text": "Sonify the microbiome\nAny plot can be sonified, or at least that’s what theory says… Here are some microbiome sonification experiments using:\n\n\n\nCompositional barplots\nAlpha diversity boxplots\nOrdination plots\nPhylogenetic trees 🐘 (Boutin and Vienne 2017)\n\n\n\n\n\nPhylotree sonification algorithm"
+  },
+  {
+    "objectID": "adv.html#tactile-paper",
+    "href": "adv.html#tactile-paper",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Tactile paper",
+    "text": "Tactile paper\nPaper with embossed Braille text and graphics. A special (expensive) paper and machine are required, but printing is easy and fast (seconds to minutes).\n\n\n\n\n\nCover of Getting a Feel for Eclipses\n\n\n\n\n\n\nFirst page of Getting a Feel of Eclipses"
+  },
+  {
+    "objectID": "adv.html#d-printed-models",
+    "href": "adv.html#d-printed-models",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "3D-printed models",
+    "text": "3D-printed models\n\nPlastic models of atoms and brain structures"
+  },
+  {
+    "objectID": "adv.html#lithophanes",
+    "href": "adv.html#lithophanes",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Lithophanes",
+    "text": "Lithophanes\nThe rebirth of an old art as a method for data accessibility (Koone et al. 2022).\n\n\n\n\n\nLithophanes of faces and pictures\n\n\n\n\n\n\nLithophanes of chromatography assays and QR codes"
+  },
+  {
+    "objectID": "adv.html#haptics",
+    "href": "adv.html#haptics",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Haptics",
+    "text": "Haptics\nVibration, pressure, ultrasound, electric stimulation, or anything that can mimic the experience of touch.\nCreate haptic feedback on W3C Vibration API or HTML.\n\n\n\n\n\nApp to perceive shapes on tablet\n\n\n\n\n\n\nA model of a haptic keyboard to read web content"
+  },
+  {
+    "objectID": "adv.html#r-toolkit-4-ally",
+    "href": "adv.html#r-toolkit-4-ally",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "R toolkit 4 Ally",
+    "text": "R toolkit 4 Ally\nHow can I make my tables and figures more accessible?\n\nData textualisation (BrailleR)\nData sonification (sonify)\nData tactualisation (tactileR)\nEvery ggplotter’s broken dream (playitbyr) 🤩😭\n\n\n# iris dataset vars mapped to pitch, time, modulation freq and index\nsonify(iris, sonaes(time = Petal.Length, pitch = Petal.Width,\n                    mod = Sepal.Length, indx = Sepal.Width)) +\n  shape_scatter() +\n  scale_time_continuous(c(0, 10)) +\n  scale_pitch_continuous(c(7, 12))"
+  },
+  {
+    "objectID": "adv.html#epilogue",
+    "href": "adv.html#epilogue",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "Epilogue",
+    "text": "Epilogue\nHow to make my poster more accessible?\n\n\n\n\nQR codes with alt text or sounds\nText and plots on tactile paper\nPlots on lithophanes\n3D-printed models of results\nHaptics when touching plots\nGet more creative"
+  },
+  {
+    "objectID": "adv.html#references",
+    "href": "adv.html#references",
+    "title": "Accessible (?) Data “Visualisation”",
+    "section": "References",
+    "text": "References\nCredits to Markku Häkkinen and Helen Sullivan for some of the pictures.\n\n\n\n\n\n\n\n\nBoutin, Henri, and Damien de Vienne. 2017. “Sonification of Phylogenetic Trees: Listening to Evolution.” In Journées d’informatique Musicale (JIM) 2017.\n\n\nKoone, Jordan C, Chad M Dashnaw, Emily A Alonzo, Miguel A Iglesias, Kelly-Shaye Patero, Juan J Lopez, Ao Yun Zhang, et al. 2022. “Data for All: Tactile Graphics That Light up with Picture-Perfect Resolution.” Science Advances 8 (33): eabq2640.\n\n\nWHO. 2022. Global Report on Health Equity for Persons with Disabilities. World Health Organization."
+  }
+]
