@@ -1,0 +1,177 @@
+---
+title: 'Accessible (?) Data "Visualisation"'
+author: Giulio Benedetti
+bibliography: references.bib
+format: 
+  revealjs:
+    slide-number: true
+---
+
+## Learning goals
+
+-   Broaden view on accessibility
+-   Learn tools for accessible data science
+-   Make research outreach more accessible
+
+## Prologue
+
+While presenting my poster at Jyväskylä Summer School...
+
+![](img/poster.png){fig-align="center"}
+
+## Accessibility
+
+Over a billion people (more than 15% of the global population) have at least one disability [@world2022global].
+
+The 2019 European Accessibility Act (EEA) just came into effect in June 2025 and requires EU products to be accessible.
+
+The Web Content Accessibility Guidelines (WCAG) published by the World Wide Web Consortium (3WC) promote content to be:
+
+-   **perceivable** to multiple senses (e.g., alt text)
+-   **operable** in multiple modes (e.g., keyboard navigation)
+-   **understandable** through a simple and intuitive interface
+-   **robust** with current and future tech (e.g, reading machine)
+
+## Multi-sensory visualisation
+
+For more accessible data visualisation, we can leverage multiple sensory modalities.
+
+> "Data visualisation implies vision, but vision is not always available, or complexity might be visually overwhelming."
+>
+> — Markku Häkkinen
+
+> "We shouldn’t abbreviate the truth but rather get a new method of presentation."
+>
+> ― Edward Tufte
+
+Learn [how to land a plane](https://www.youtube.com/watch?v=jsG_rvyLnYQ){target="_blank"}, then check out `theme_tufte()`.
+
+## Beyond just plots
+
+Accessibility from enthusiast to devoted:
+
+-   Alternative text
+-   Plots to sounds (sonification)
+-   3D-printed models
+-   Embossed paper
+-   Lithophanes
+-   Haptics
+
+## Alt text
+
+Alt text should not be a copy of the figure caption, as it serves a different purpose (accessibility vs context/emphasis).
+
+Alt text should be a clear and complete description of visual content (e.g, a figure), going from general to narrow focus, from major to minor aspects.
+
+![Example of alt text from my master thesis](img/alt_text.png)
+
+## Sonify the microbiome
+
+Any plot can be sonified, or at least that's what theory says... Here are some [microbiome sonification experiments](https://github.com/RiboRings/SonifyMicrobiome/tree/8c7cd6265ef2a7aad7ec04dcb46fc57a2b551857){target="_blank"} using:
+
+::: columns
+::: {.column width="50%"}
+-   Compositional barplots
+-   Alpha diversity boxplots
+-   Ordination plots
+-   Phylogenetic trees 🐘 [@boutin2017sonification]
+:::
+
+::: {.column width="50%"}
+![Phylotree sonification algorithm](img/sonify_phylotree.png)
+:::
+:::
+
+## Tactile paper
+
+Paper with embossed Braille text and graphics. A special (expensive) paper and machine are required, but printing is easy and fast (seconds to minutes).
+
+::: columns
+::: {.column width="50%"}
+![Cover of Getting a Feel for Eclipses](img/eclipse1.jpeg)
+:::
+
+::: {.column width="50%"}
+![First page of Getting a Feel of Eclipses](img/eclipse2.jpeg)
+:::
+:::
+
+## 3D-printed models
+
+![Plastic models of atoms and brain structures](img/3d_models.jpeg)
+
+## Lithophanes
+
+The rebirth of an old art as a method for data accessibility [@koone2022data].
+
+::: columns
+::: {.column width="50%"}
+![Lithophanes of faces and pictures](img/lithophanes1.png)
+:::
+
+::: {.column width="50%"}
+![Lithophanes of chromatography assays and QR codes](img/lithophanes2.png)
+:::
+:::
+
+## Haptics
+
+Vibration, pressure, ultrasound, electric stimulation, or anything that can
+mimic the experience of touch.
+
+Create haptic feedback on [W3C Vibration API](https://www.w3.org/TR/vibration/){target="_blank"} or [HTML](http://diagramcenter.org/integrating-haptic-feedback.html){target="_blank"}.
+
+::: columns
+::: {.column width="60%"}
+![App to perceive shapes on tablet](img/haptic_toolkit.png){alt="A model of a haptic keyboard to read Braille text"}
+:::
+
+::: {.column width="40%"}
+![A model of a haptic keyboard to read web content](img/haptic_keyboard.png){alt="A model of a haptic keyboard to read web content"}
+:::
+:::
+
+## R toolkit 4 Ally
+
+How can I make my tables and figures more accessible?
+
+-   Data textualisation ([`BrailleR`](https://jooyoungseo.com/post/ds4blind/){target="_blank"})
+-   Data sonification ([`sonify`](https://jooyoungseo.com/post/ds4blind/){target="_blank"})
+-   Data tactualisation ([`tactileR`](https://jooyoungseo.com/post/ds4blind/){target="_blank"})
+-   Every ggplotter's broken dream ([~~`playitbyr`~~](http://playitbyr.org/){target="_blank"}) 🤩😭
+
+```{r}
+#| echo: true
+#| eval: false
+# iris dataset vars mapped to pitch, time, modulation freq and index
+sonify(iris, sonaes(time = Petal.Length, pitch = Petal.Width,
+                    mod = Sepal.Length, indx = Sepal.Width)) +
+  shape_scatter() +
+  scale_time_continuous(c(0, 10)) +
+  scale_pitch_continuous(c(7, 12))
+```
+
+## Epilogue
+
+How to make my poster more accessible?
+
+::: columns
+::: {.column width="60%"}
+::: incremental
+-   QR codes with alt text or sounds
+-   Text and plots on tactile paper
+-   Plots on lithophanes
+-   3D-printed models of results
+-   Haptics when touching plots
+-   Get more creative
+:::
+:::
+
+::: {.column width="40%"}
+![](img/poster.png)
+:::
+:::
+
+## References
+
+Credits to Markku Häkkinen and Helen Sullivan for some of the pictures.
